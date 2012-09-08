@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Portal.Models.Service>
+@{
+    ViewBag.Title = "Index";
+}
+
+<p>
+    @Html.ActionLink("Admin", "Index", "ServicesManager")
+</p>
+
+<h2>Обирай свій сервіс</h2>
+<div>
+    <ul>
+        @foreach (var service in Model)
+        {
+            <li>
+                @Html.ActionLink(service.Name, "Browse", new { service = service.Name })<br />               
+                <img alt="@service.Name" src="@service.Images.Single(i => i.Name == "sample img").ImgUrl" height="200" />
+            </li>
+        }
+    </ul>
+</div>

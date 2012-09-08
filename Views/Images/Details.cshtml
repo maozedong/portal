@@ -1,0 +1,25 @@
+﻿@model Portal.Models.Image
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Image</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">ImgUrl</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ImgUrl)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ImageId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

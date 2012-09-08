@@ -1,0 +1,14 @@
+﻿@model Portal.Models.Service
+
+@{
+    ViewBag.Title = "Browse";
+}
+<h2>@Model.Name</h2>
+
+<p>
+    @Model.Description
+</p>
+
+<p>
+<img alt="@Model.Images.Single(i=>i.Name == "sample img").ImgUrl" src="@Model.Images.Single(i => i.Name == "sample img").ImgUrl" />
+</p>
